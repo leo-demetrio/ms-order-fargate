@@ -20,6 +20,7 @@ public class AwsMsorderApp {
 
         AwsMsorderService awsMsorderService = new AwsMsorderService(app, "Service", awsMsorderCluster.getCluster());
         awsMsorderService.addDependency(awsMsorderCluster);
+        awsMsorderService.addDependency(awsMsorderRds);
 
         app.synth();
     }
